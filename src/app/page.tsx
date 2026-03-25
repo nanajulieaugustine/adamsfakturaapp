@@ -2,64 +2,104 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      
+    <h1 className="flex items-center justify-center">Hej skat</h1>
+
+        <div className="flex flex-row gap-10 justify-center">
+          <div className="flex flex-col gap-2 ">
+          <h3 className="italic">Dine oplysninger</h3>
+          <input name="bruger_navn" type="text" placeholder="navn" />
+          <input name="bruger_adresse" type="text" placeholder="adresse" />
+          <input name="bruger_email" type="text" placeholder="email"/>
+          <input name="bruger_telefonnummer" type="text" placeholder="telefonnummer" />
+          <input name="bruger_hjemmeside" type="text" placeholder="hjemmeside" />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <h3 className="italic">Modtagers oplysninger</h3>
+            <input name="modtager_navn" type="text" placeholder="navn" />
+          <input name="modtager_adresse" type="text" placeholder="adresse" />
+          <input name="modtager_cvr" type="text" placeholder="cvr" />
+          <button>Gem bruger</button>
+          </div>
+
+               <div className="flex flex-col gap-2">
+            <h3 className="italic">Kontaktpersons oplysninger</h3>
+            <input name="kontaktperson_navn" type="text" placeholder="navn" />
+          <input name="kontaktperson_email" type="text" placeholder="email" />
+          <input name="kontaktperson_tlf" type="text" placeholder="tlf" />
+          <button>Gem bruger</button>
+          </div>
+    </div>
+
+
+    <div className="flex flex-col">
+      <h3 className="text-2xl font-bold text-center mt-10">Faktura oplysninger:</h3>
+        <span>Fakturanummer: </span>
+        <input type="datetime-local" />
+
+        <div className="flex gap-2">
+          <p>Betaling til:</p>
+          <input name="regnummer" type="text" placeholder="registreringsnummer" />
+          <input name="kontonummer" type="text" placeholder="kontonummer" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <input name="iban" type="text" placeholder="IBAN" />
+        <p class="bg-red-500 w-fit p-1.5">Betaling skal ske via bankoverførsel.</p>
+        <p>Produktion: </p>
+    </div>
+
+    <div className="flex flex-col">
+      <h3 className="text-2xl font-bold text-center mt-10">Lejeperiode:</h3>
+        <span>Startdato: </span>
+        <input type="datetime-local" />
+        <div class="flex">
+        <span>Slutdato:</span>
+        <input type="datetime-local" />
+        <span>(dage)</span>
         </div>
-      </main>
+
+        <span>Afhentning:</span>
+        <span>Returnering:</span>
+    </div>
+
+      <table class="table-auto w-full mt-10">
+        <thead>
+          <tr>
+            <th className="border min-w-100 font-bold px-4 py-2">Ydelse</th>
+            <th className="border font-bold px-4 py-2">Pris</th>
+            <th className="border font-bold px-4 py-2">Rabat</th>
+            <th className="border font-bold px-4 py-2">Beløb</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border px-4 py-2">Ydelse 1</td>
+            <td className="border px-4 py-2">Pris 1</td>
+            <td class="border px-4 py-2">Rabat</td>
+            <td className="border px-4 py-2">200 DKK</td>
+          </tr>
+                    <tr>
+            <td className="border px-4 py-2">Forsikring 1</td>
+            <td className="border px-4 py-2">Pris 1</td>
+            <td className="border px-4 py-2">--</td>
+            <td className="border px-4 py-2">200 DKK</td>
+          </tr>
+             </tbody>
+      </table>
+      <p className="text-xl font-bold text-right mt-2">Totalbeløb:</p>
+    <p className="italic">Bemærk: Betaling skal ske før afhentning af udstyret.</p>
+    <p className="italic">Ved manglende betaling, udleveres udstyret ikke.</p>
+    <p className="italic">Alle betalinger er endelige og refunderes ikke, medmindre andet er skriftligt aftalt.</p>
+
+    <div className="mt-10">
+      <hr />
+      <div className="flex justify-between">
+      <p className="italic">Underskrift:</p>
+      <p className="pr-50">Dato:</p>
+      </div>
+    </div>
+
     </div>
   );
 }
