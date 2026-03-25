@@ -45,7 +45,7 @@ export default function Home() {
           <input name="kontonummer" type="text" placeholder="kontonummer" />
         </div>
         <input name="iban" type="text" placeholder="IBAN" />
-        <p class="bg-red-500 w-fit p-1.5">Betaling skal ske via bankoverførsel.</p>
+        <p className="bg-red-500 w-fit p-1.5">Betaling skal ske via bankoverførsel.</p>
         <p>Produktion: </p>
     </div>
 
@@ -53,7 +53,7 @@ export default function Home() {
       <h3 className="text-2xl font-bold text-center mt-10">Lejeperiode:</h3>
         <span>Startdato: </span>
         <input type="datetime-local" />
-        <div class="flex">
+        <div className="flex">
         <span>Slutdato:</span>
         <input type="datetime-local" />
         <span>(dage)</span>
@@ -63,7 +63,7 @@ export default function Home() {
         <span>Returnering:</span>
     </div>
 
-      <table class="table-auto w-full mt-10">
+      <table className="table-auto w-full mt-10">
         <thead>
           <tr>
             <th className="border min-w-100 font-bold px-4 py-2">Ydelse</th>
@@ -76,7 +76,7 @@ export default function Home() {
           <tr>
             <td className="border px-4 py-2">Ydelse 1</td>
             <td className="border px-4 py-2">Pris 1</td>
-            <td class="border px-4 py-2">Rabat</td>
+            <td className="border px-4 py-2">Rabat</td>
             <td className="border px-4 py-2">200 DKK</td>
           </tr>
                     <tr>
