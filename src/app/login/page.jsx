@@ -1,8 +1,8 @@
-import LoginUserServer from "@/components/LoginUserServer";
+import LoginUserServer from "@/components/login/LoginUserServer";
+
 const Login = () => {
     return ( 
-        <div></div>
-        // <LoginUserServer/>
+        <LoginUserServer/>
      );
 }
  

@@ -1,6 +1,6 @@
-const PrimaryButton = ({onClick, children}) => {
+const PrimaryButton = ({onClick = undefined, type = "submit", children}) => {
     return (
-        <button className="cursor-pointer m-auto transition-all duration-300 ease-in-out rounded-full px-2.5 py-1.5 bg-transparent border border-foreground hover:bg-foreground hover:text-background" onClick={onClick}>{children}</button>
+        <button type={type} className="cursor-pointer m-auto transition-all duration-300 ease-in-out rounded-full px-2.5 py-1.5 bg-transparent border border-foreground hover:bg-foreground hover:text-background" onClick={onClick}>{children}</button>
       );
 }
  
